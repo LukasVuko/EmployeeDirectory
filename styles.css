@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  background: #f5f6fa;
+}
+
+/* HEADER CONTENT */
+header {
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+h1 {
+  font-size: 2em;
+}
+
+input {
+  padding: 1em;
+  width: 25%;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+}
+input:focus {
+  outline-width: 0;
+}
+/* MAIN SITE CONTENT STYLING */
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin: 0.5em auto;
+  display: flex;
+  width: 280px;
+  align-items: left;
+  padding: 1.5em;
+}
+
+#card-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  align-items: flex-start;
+  margin-left: 1em;
+  align-self: center;
+}
+.card-name {
+  font-size: 1.4em;
+}
+.card-email,
+.card-city {
+  font-size: 0.85em;
+  color: grey;
+}
+
+/* MODAL STYLING */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.modalContent {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 14%;
+  background-color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 1em;
+  position: relative;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.9);
+}
+.modal-inner {
+  margin: 0 auto;
+  color: gray;
+}
+span {
+  color: grey;
+  float: right;
+  font-size: 3em;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  transition-duration: 0.35s;
+}
+span:hover {
+  color: black;
+  cursor: pointer;
+}
+
+#modal-image {
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 25%;
+}
+.modal-name {
+  font-size: 1.3em;
+  font-weight: 900;
+  color: black;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 2em auto;
+  padding: 0;
+  width: 90%;
+}
