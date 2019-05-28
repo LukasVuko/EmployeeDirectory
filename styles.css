@@ -46,7 +46,7 @@ input:focus {
   border-radius: 5px;
   margin: 0.5em auto;
   display: flex;
-  width: 280px;
+  width: 300px;
   align-items: left;
   padding: 1.5em;
 }

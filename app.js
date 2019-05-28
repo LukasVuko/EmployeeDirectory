@@ -22,9 +22,7 @@ function fetchData(url) {
     .catch(err => console.log(err));
 }
 
-for (i = 0; i < 12; i += 1) {
-  fetchData("https://randomuser.me/api/").then(data => generateArray(data));
-}
+fetchData("https://randomuser.me/api/").then(data => generateArray(data));
 
 // HELPER FUNCTIONS
 
@@ -42,6 +40,26 @@ function generateArray(data) {
     `${data.dob.date.substring(2, 10)}`
   );
   array.push(userObject);
+}
+
+function generateHTML(arr) {
+  const container = document.getElementsByClassName("container")[0];
+  arr.forEach(employee => {
+    const htmlTag = `
+        <div class="card">
+        <img
+        id="card-image"
+        src="${employee.img}"
+        />
+        <div class="card-inner">
+        <h2 class="card-name">${employee.firstName} ${employee.lastName}</h2>
+        <p class="card-email">${employee.email}</p>
+        <p class="card-city">${employee.city}</p>
+        </div>
+    </div>
+    `;
+    container.innerHTML += htmlTag;
+  });
 }
 
 // MODAL
